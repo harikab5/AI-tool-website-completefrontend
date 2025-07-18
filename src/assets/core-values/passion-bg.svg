@@ -1,0 +1,76 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="passionGradient" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" style="stop-color:#ef4444;stop-opacity:0.4" />
+      <stop offset="50%" style="stop-color:#f7e37a;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#1e293b;stop-opacity:0.8" />
+    </radialGradient>
+    <pattern id="passionPattern" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
+      <circle cx="30" cy="30" r="2" fill="#ef4444" opacity="0.3"/>
+      <path d="M30,0 Q40,30 30,60 Q20,30 30,0" fill="none" stroke="#f7e37a" stroke-width="1" opacity="0.2"/>
+    </pattern>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="url(#passionGradient)"/>
+  
+  <!-- Passion pattern overlay -->
+  <rect width="400" height="300" fill="url(#passionPattern)"/>
+  
+  <!-- Central heart -->
+  <g transform="translate(200, 150)">
+    <!-- Heart shape -->
+    <path d="M0,10 Q-20,-10 -30,10 Q-30,30 -10,40 Q0,50 10,40 Q30,30 30,10 Q20,-10 0,10" 
+          fill="none" stroke="#ef4444" stroke-width="3" opacity="0.8"/>
+    <!-- Heart glow -->
+    <path d="M0,10 Q-15,-5 -25,10 Q-25,25 -8,35 Q0,40 8,35 Q25,25 25,10 Q15,-5 0,10" 
+          fill="none" stroke="#f7e37a" stroke-width="2" opacity="0.6"/>
+  </g>
+  
+  <!-- Technology impact elements -->
+  <g transform="translate(80, 80)">
+    <!-- Circuit board -->
+    <rect x="-15" y="-10" width="30" height="20" fill="none" stroke="#60a5fa" stroke-width="1" opacity="0.6"/>
+    <line x1="-15" y1="0" x2="15" y2="0" stroke="#f7e37a" stroke-width="1" opacity="0.6"/>
+    <line x1="-15" y1="-5" x2="15" y2="-5" stroke="#f7e37a" stroke-width="1" opacity="0.6"/>
+    <line x1="-15" y1="5" x2="15" y2="5" stroke="#f7e37a" stroke-width="1" opacity="0.6"/>
+    <line x1="0" y1="-10" x2="0" y2="10" stroke="#60a5fa" stroke-width="1" opacity="0.6"/>
+    <circle cx="-10" cy="-5" r="2" fill="#ef4444" opacity="0.6"/>
+    <circle cx="10" cy="5" r="2" fill="#ef4444" opacity="0.6"/>
+  </g>
+  
+  <g transform="translate(320, 100)">
+    <!-- Digital world -->
+    <circle cx="0" cy="0" r="12" fill="none" stroke="#60a5fa" stroke-width="2" opacity="0.6"/>
+    <circle cx="0" cy="0" r="8" fill="none" stroke="#f7e37a" stroke-width="1" opacity="0.6"/>
+    <circle cx="0" cy="0" r="4" fill="#ef4444" opacity="0.6"/>
+    <line x1="-12" y1="0" x2="12" y2="0" stroke="#60a5fa" stroke-width="1" opacity="0.6"/>
+    <line x1="0" y1="-12" x2="0" y2="12" stroke="#60a5fa" stroke-width="1" opacity="0.6"/>
+  </g>
+  
+  <g transform="translate(120, 220)">
+    <!-- Impact waves -->
+    <circle cx="0" cy="0" r="15" fill="none" stroke="#ef4444" stroke-width="1" opacity="0.4"/>
+    <circle cx="0" cy="0" r="10" fill="none" stroke="#f7e37a" stroke-width="1" opacity="0.4"/>
+    <circle cx="0" cy="0" r="5" fill="none" stroke="#60a5fa" stroke-width="1" opacity="0.4"/>
+  </g>
+  
+  <g transform="translate(280, 200)">
+    <!-- Innovation spark -->
+    <path d="M-8,-8 L8,8 M-8,8 L8,-8" stroke="#f7e37a" stroke-width="2" opacity="0.6"/>
+    <circle cx="0" cy="0" r="4" fill="#ef4444" opacity="0.6"/>
+  </g>
+  
+  <!-- Passion flow lines -->
+  <path d="M50,60 Q100,40 150,60" stroke="#ef4444" stroke-width="1" fill="none" opacity="0.4"/>
+  <path d="M250,80 Q300,60 350,80" stroke="#f7e37a" stroke-width="1" fill="none" opacity="0.4"/>
+  <path d="M100,240 Q150,220 200,240" stroke="#60a5fa" stroke-width="1" fill="none" opacity="0.4"/>
+  
+  <!-- Energy particles -->
+  <circle cx="150" cy="80" r="2" fill="#ef4444" opacity="0.6"/>
+  <circle cx="250" cy="60" r="2" fill="#f7e37a" opacity="0.6"/>
+  <circle cx="180" cy="120" r="2" fill="#ef4444" opacity="0.6"/>
+  <circle cx="220" cy="100" r="2" fill="#f7e37a" opacity="0.6"/>
+  <circle cx="120" cy="180" r="2" fill="#60a5fa" opacity="0.6"/>
+  <circle cx="280" cy="160" r="2" fill="#ef4444" opacity="0.6"/>
+</svg> 

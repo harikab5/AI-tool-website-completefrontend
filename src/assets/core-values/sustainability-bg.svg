@@ -1,0 +1,72 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="sustainabilityGradient" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" style="stop-color:#60a5fa;stop-opacity:0.3" />
+      <stop offset="50%" style="stop-color:#10b981;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#1e293b;stop-opacity:0.8" />
+    </radialGradient>
+    <pattern id="ecoPattern" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="20" cy="20" r="1" fill="#10b981" opacity="0.4"/>
+      <path d="M20,0 Q25,20 20,40 Q15,20 20,0" fill="none" stroke="#60a5fa" stroke-width="1" opacity="0.3"/>
+    </pattern>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="url(#sustainabilityGradient)"/>
+  
+  <!-- Eco pattern overlay -->
+  <rect width="400" height="300" fill="url(#ecoPattern)"/>
+  
+  <!-- Central globe -->
+  <g transform="translate(200, 150)">
+    <!-- Globe outline -->
+    <circle cx="0" cy="0" r="50" fill="none" stroke="#60a5fa" stroke-width="3" opacity="0.8"/>
+    <!-- Meridians -->
+    <path d="M-50,0 Q0,-20 50,0 Q0,20 -50,0" fill="none" stroke="#10b981" stroke-width="1" opacity="0.6"/>
+    <path d="M-50,0 Q0,20 50,0 Q0,-20 -50,0" fill="none" stroke="#10b981" stroke-width="1" opacity="0.6"/>
+    <!-- Parallels -->
+    <ellipse cx="0" cy="-25" rx="43" ry="15" fill="none" stroke="#60a5fa" stroke-width="1" opacity="0.6"/>
+    <ellipse cx="0" cy="25" rx="43" ry="15" fill="none" stroke="#60a5fa" stroke-width="1" opacity="0.6"/>
+    <!-- Continents -->
+    <path d="M-30,-10 Q-20,-5 -10,-10 Q0,-15 10,-10 Q20,-5 30,-10" fill="#10b981" opacity="0.4"/>
+    <path d="M-20,5 Q-10,10 0,5 Q10,0 20,5" fill="#10b981" opacity="0.4"/>
+    <path d="M-15,20 Q-5,25 5,20 Q15,15 25,20" fill="#10b981" opacity="0.4"/>
+  </g>
+  
+  <!-- Environmental elements -->
+  <g transform="translate(80, 80)">
+    <!-- Tree -->
+    <rect x="-2" y="0" width="4" height="20" fill="#10b981" opacity="0.6"/>
+    <circle cx="0" cy="-5" r="8" fill="#10b981" opacity="0.6"/>
+    <circle cx="-6" cy="-2" r="6" fill="#10b981" opacity="0.6"/>
+    <circle cx="6" cy="-2" r="6" fill="#10b981" opacity="0.6"/>
+  </g>
+  
+  <g transform="translate(320, 100)">
+    <!-- Solar panel -->
+    <rect x="-15" y="-10" width="30" height="20" fill="#f7e37a" opacity="0.6"/>
+    <line x1="-15" y1="0" x2="15" y2="0" stroke="#60a5fa" stroke-width="1" opacity="0.6"/>
+    <line x1="-15" y1="-5" x2="15" y2="-5" stroke="#60a5fa" stroke-width="1" opacity="0.6"/>
+    <line x1="-15" y1="5" x2="15" y2="5" stroke="#60a5fa" stroke-width="1" opacity="0.6"/>
+  </g>
+  
+  <g transform="translate(120, 220)">
+    <!-- Wind turbine -->
+    <rect x="-2" y="0" width="4" height="25" fill="#60a5fa" opacity="0.6"/>
+    <circle cx="0" cy="-5" r="12" fill="none" stroke="#f7e37a" stroke-width="2" opacity="0.6"/>
+    <path d="M-12,-5 L-8,-9 L-4,-5" fill="none" stroke="#f7e37a" stroke-width="2" opacity="0.6"/>
+    <path d="M12,-5 L8,-1 L4,-5" fill="none" stroke="#f7e37a" stroke-width="2" opacity="0.6"/>
+  </g>
+  
+  <g transform="translate(280, 200)">
+    <!-- Recycle symbol -->
+    <path d="M-8,-8 L8,-8 L8,8 L-8,8 Z" fill="none" stroke="#10b981" stroke-width="2" opacity="0.6"/>
+    <path d="M-8,-8 L0,0 L8,-8" fill="none" stroke="#60a5fa" stroke-width="2" opacity="0.6"/>
+    <path d="M8,8 L0,0 L-8,8" fill="none" stroke="#60a5fa" stroke-width="2" opacity="0.6"/>
+  </g>
+  
+  <!-- Sustainability flow lines -->
+  <path d="M50,60 Q100,40 150,60" stroke="#10b981" stroke-width="1" fill="none" opacity="0.4"/>
+  <path d="M250,80 Q300,60 350,80" stroke="#60a5fa" stroke-width="1" fill="none" opacity="0.4"/>
+  <path d="M100,240 Q150,220 200,240" stroke="#10b981" stroke-width="1" fill="none" opacity="0.4"/>
+</svg> 

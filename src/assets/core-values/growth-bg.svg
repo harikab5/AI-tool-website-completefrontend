@@ -1,0 +1,76 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="growthGradient" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#1e293b;stop-opacity:0.8" />
+      <stop offset="50%" style="stop-color:#60a5fa;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#f7e37a;stop-opacity:0.4" />
+    </linearGradient>
+    <pattern id="growthPattern" x="0" y="0" width="50" height="50" patternUnits="userSpaceOnUse">
+      <circle cx="25" cy="25" r="1" fill="#f7e37a" opacity="0.3"/>
+      <line x1="25" y1="0" x2="25" y2="50" stroke="#60a5fa" stroke-width="1" opacity="0.2"/>
+    </pattern>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="url(#growthGradient)"/>
+  
+  <!-- Growth pattern overlay -->
+  <rect width="400" height="300" fill="url(#growthPattern)"/>
+  
+  <!-- Central rocket -->
+  <g transform="translate(200, 180)">
+    <!-- Rocket body -->
+    <rect x="-8" y="-40" width="16" height="40" fill="none" stroke="#f7e37a" stroke-width="3" opacity="0.8"/>
+    <!-- Rocket nose -->
+    <path d="M-8,-40 L0,-60 L8,-40" fill="none" stroke="#60a5fa" stroke-width="3" opacity="0.8"/>
+    <!-- Rocket fins -->
+    <path d="M-8,-20 L-15,-10 L-8,0" fill="none" stroke="#f7e37a" stroke-width="2" opacity="0.8"/>
+    <path d="M8,-20 L15,-10 L8,0" fill="none" stroke="#f7e37a" stroke-width="2" opacity="0.8"/>
+    <!-- Engine exhaust -->
+    <path d="M-8,0 L-12,10 L-4,0" fill="none" stroke="#f7e37a" stroke-width="2" opacity="0.6"/>
+    <path d="M8,0 L12,10 L4,0" fill="none" stroke="#f7e37a" stroke-width="2" opacity="0.6"/>
+    <!-- Windows -->
+    <circle cx="0" cy="-30" r="3" fill="#60a5fa" opacity="0.8"/>
+    <circle cx="0" cy="-15" r="3" fill="#60a5fa" opacity="0.8"/>
+  </g>
+  
+  <!-- Growth trajectory -->
+  <path d="M200,220 Q180,180 160,140 Q140,100 120,60" stroke="#f7e37a" stroke-width="2" fill="none" opacity="0.6" stroke-dasharray="5,5"/>
+  
+  <!-- Learning elements -->
+  <g transform="translate(80, 100)">
+    <!-- Book -->
+    <rect x="-12" y="-8" width="24" height="16" fill="none" stroke="#60a5fa" stroke-width="2" opacity="0.6"/>
+    <line x1="-12" y1="0" x2="12" y2="0" stroke="#f7e37a" stroke-width="1" opacity="0.6"/>
+    <line x1="-12" y1="-4" x2="12" y2="-4" stroke="#f7e37a" stroke-width="1" opacity="0.6"/>
+    <line x1="-12" y1="4" x2="12" y2="4" stroke="#f7e37a" stroke-width="1" opacity="0.6"/>
+  </g>
+  
+  <g transform="translate(320, 120)">
+    <!-- Graduation cap -->
+    <rect x="-15" y="0" width="30" height="8" fill="none" stroke="#f7e37a" stroke-width="2" opacity="0.6"/>
+    <path d="M-15,0 L0,-10 L15,0" fill="none" stroke="#f7e37a" stroke-width="2" opacity="0.6"/>
+    <line x1="0" y1="-10" x2="0" y2="-20" stroke="#60a5fa" stroke-width="1" opacity="0.6"/>
+  </g>
+  
+  <g transform="translate(120, 200)">
+    <!-- Brain/learning -->
+    <path d="M-10,0 Q-5,-8 0,0 Q5,-8 10,0 Q5,8 0,0 Q-5,8 -10,0" fill="none" stroke="#60a5fa" stroke-width="2" opacity="0.6"/>
+    <circle cx="-5" cy="-3" r="2" fill="#f7e37a" opacity="0.6"/>
+    <circle cx="5" cy="-3" r="2" fill="#f7e37a" opacity="0.6"/>
+  </g>
+  
+  <g transform="translate(280, 180)">
+    <!-- Skills chart -->
+    <rect x="-10" y="-8" width="20" height="16" fill="none" stroke="#f7e37a" stroke-width="2" opacity="0.6"/>
+    <rect x="-8" y="2" width="4" height="6" fill="#60a5fa" opacity="0.6"/>
+    <rect x="-2" y="-2" width="4" height="10" fill="#60a5fa" opacity="0.6"/>
+    <rect x="4" y="-6" width="4" height="14" fill="#60a5fa" opacity="0.6"/>
+  </g>
+  
+  <!-- Growth indicators -->
+  <circle cx="150" cy="80" r="4" fill="#f7e37a" opacity="0.6"/>
+  <circle cx="250" cy="60" r="4" fill="#60a5fa" opacity="0.6"/>
+  <circle cx="180" cy="120" r="4" fill="#f7e37a" opacity="0.6"/>
+  <circle cx="220" cy="100" r="4" fill="#60a5fa" opacity="0.6"/>
+</svg> 

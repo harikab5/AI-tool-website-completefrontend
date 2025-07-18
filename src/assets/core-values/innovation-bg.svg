@@ -1,0 +1,62 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="innovationGradient" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" style="stop-color:#f7e37a;stop-opacity:0.4" />
+      <stop offset="50%" style="stop-color:#60a5fa;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#1e293b;stop-opacity:0.8" />
+    </radialGradient>
+    <pattern id="ideaPattern" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
+      <circle cx="30" cy="30" r="2" fill="#f7e37a" opacity="0.4"/>
+      <line x1="30" y1="0" x2="30" y2="60" stroke="#60a5fa" stroke-width="1" opacity="0.3"/>
+      <line x1="0" y1="30" x2="60" y2="30" stroke="#60a5fa" stroke-width="1" opacity="0.3"/>
+    </pattern>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="url(#innovationGradient)"/>
+  
+  <!-- Idea pattern overlay -->
+  <rect width="400" height="300" fill="url(#ideaPattern)"/>
+  
+  <!-- Central lightbulb -->
+  <g transform="translate(200, 120)">
+    <!-- Bulb -->
+    <ellipse cx="0" cy="0" rx="25" ry="35" fill="none" stroke="#f7e37a" stroke-width="3" opacity="0.8"/>
+    <!-- Base -->
+    <rect x="-15" y="35" width="30" height="20" rx="5" fill="none" stroke="#60a5fa" stroke-width="2" opacity="0.8"/>
+    <!-- Filament -->
+    <path d="M-15,-10 Q0,-20 15,-10 Q0,0 -15,-10" fill="none" stroke="#f7e37a" stroke-width="2" opacity="0.9"/>
+    <path d="M-10,-15 Q0,-5 10,-15" fill="none" stroke="#f7e37a" stroke-width="1" opacity="0.9"/>
+    <!-- Light rays -->
+    <line x1="0" y1="-35" x2="0" y2="-50" stroke="#f7e37a" stroke-width="2" opacity="0.6"/>
+    <line x1="-20" y1="-30" x2="-35" y2="-45" stroke="#f7e37a" stroke-width="1" opacity="0.6"/>
+    <line x1="20" y1="-30" x2="35" y2="-45" stroke="#f7e37a" stroke-width="1" opacity="0.6"/>
+  </g>
+  
+  <!-- Creative problem-solving elements -->
+  <g transform="translate(80, 80)">
+    <circle cx="0" cy="0" r="8" fill="#60a5fa" opacity="0.6"/>
+    <line x1="-8" y1="0" x2="8" y2="0" stroke="#f7e37a" stroke-width="2" opacity="0.6"/>
+    <line x1="0" y1="-8" x2="0" y2="8" stroke="#f7e37a" stroke-width="2" opacity="0.6"/>
+  </g>
+  
+  <g transform="translate(320, 100)">
+    <polygon points="0,-8, 6,4, -6,4" fill="#f7e37a" opacity="0.6"/>
+    <circle cx="0" cy="8" r="4" fill="#60a5fa" opacity="0.6"/>
+  </g>
+  
+  <g transform="translate(120, 220)">
+    <rect x="-10" y="-8" width="20" height="16" rx="3" fill="none" stroke="#60a5fa" stroke-width="2" opacity="0.6"/>
+    <line x1="-10" y1="0" x2="10" y2="0" stroke="#f7e37a" stroke-width="1" opacity="0.6"/>
+  </g>
+  
+  <g transform="translate(280, 200)">
+    <circle cx="0" cy="0" r="6" fill="#f7e37a" opacity="0.6"/>
+    <path d="M-6,0 Q0,-6 6,0 Q0,6 -6,0" fill="none" stroke="#60a5fa" stroke-width="2" opacity="0.6"/>
+  </g>
+  
+  <!-- Innovation flow lines -->
+  <path d="M50,60 Q100,40 150,60" stroke="#f7e37a" stroke-width="1" fill="none" opacity="0.4"/>
+  <path d="M250,80 Q300,60 350,80" stroke="#60a5fa" stroke-width="1" fill="none" opacity="0.4"/>
+  <path d="M100,240 Q150,220 200,240" stroke="#f7e37a" stroke-width="1" fill="none" opacity="0.4"/>
+</svg> 
