@@ -11,7 +11,7 @@ import sustainabilityBg from '../assets/core-values/sustainability-bg.svg';
 import growthBg from '../assets/core-values/growth-bg.svg';
 import passionBg from '../assets/core-values/passion-bg.svg';
 import globalVideo from '../assets/global.mp4';
-
+import 
 const caseStudies = [
   {
     title: 'E-commerce Revolution',
