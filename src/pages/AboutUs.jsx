@@ -3,7 +3,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import teamImg from '../assets/SecondHome/clients.jpeg';
 import worldMapImg from '../assets/SecondHome/card1.jpeg';
-import abouthero from '../assets/abouthero.mp4';
+import abouthero from '../assets/aboutherovedio.mp4';
 import excellenceBg from '../assets/core-values/excellence-bg.svg';
 import integrityBg from '../assets/core-values/integrity-bg.svg';
 import innovationBg from '../assets/core-values/innovation-bg.svg';
@@ -11,7 +11,7 @@ import sustainabilityBg from '../assets/core-values/sustainability-bg.svg';
 import growthBg from '../assets/core-values/growth-bg.svg';
 import passionBg from '../assets/core-values/passion-bg.svg';
 import globalVideo from '../assets/global.mp4';
-import 
+
 const caseStudies = [
   {
     title: 'E-commerce Revolution',
