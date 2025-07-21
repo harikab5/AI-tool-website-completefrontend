@@ -8,7 +8,7 @@ import card4 from "../assets/SecondHome/card4.jpeg";
 import card5 from "../assets/SecondHome/card5.jpeg";
 import card6 from "../assets/SecondHome/card6.jpeg";
 import Clients from "../assets/SecondHome/clients.jpeg";
-import secondHeroVideo from "../assets/secondHome/secondhero.mp4";
+import secondHeroVideo from "../assets/SecondHome/secondhero.mp4";
 import agentImg from "../assets/agent.png";
 import janeDoeImg from "../assets/Jane Doe.jpg";
 import lisaRayImg from "../assets/Lisa Ray.jpg";
