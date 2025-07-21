@@ -343,23 +343,23 @@ const steps = [
 const Service5HowItWorks = () => {
   const [hovered, setHovered] = useState(null);
   return (
-    <section className="bg-[#1a1a1a] text-white py-20 px-6">
+    <section className="bg-[#1a1a1a] text-white py-20 px-3 sm:px-6">
       <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} className="max-w-5xl mx-auto text-center">
         <motion.h2 variants={fadeUp} className="text-3xl font-bold text-[#fff] mb-12">How It Works</motion.h2>
-        <div className="howit-cards flex flex-row gap-12 justify-center">
+        <div className="howit-cards flex flex-col md:flex-row gap-6 md:gap-12 justify-center items-center">
           {steps.map((s, i) => (
             <div
               key={i}
-              className={`howit-card flex flex-col items-center justify-center text-center h-[280px] w-[280px] rounded-[16px] text-white cursor-pointer transition-all duration-400 p-6 ${hovered === null ? '' : hovered === i ? 'scale-105 z-10 shadow-2xl' : 'scale-95 blur-[2px] opacity-70'}`}
+              className={`howit-card flex flex-col items-center justify-center text-center w-36 h-36 sm:w-44 sm:h-44 md:w-[220px] md:h-[220px] rounded-full text-white cursor-pointer transition-all duration-400 p-4 sm:p-6 ${hovered === null ? '' : hovered === i ? 'scale-105 z-10 shadow-2xl' : 'scale-95 blur-[2px] opacity-70'}`}
               style={{
                 background: 'linear-gradient(to right, #374151, #6B7280)',
               }}
               onMouseEnter={() => setHovered(i)}
               onMouseLeave={() => setHovered(null)}
             >
-              <p className="font-bold text-lg mb-2">{s.step}</p>
-              <p className="font-semibold text-sm mb-3">{s.title}</p>
-              <p className="text-xs leading-relaxed opacity-90">{s.desc}</p>
+              <p className="font-bold text-base sm:text-lg mb-1 sm:mb-2">{s.step}</p>
+              <p className="font-semibold text-xs sm:text-sm mb-1 sm:mb-3">{s.title}</p>
+              <p className="text-[10px] sm:text-xs leading-relaxed opacity-90">{s.desc}</p>
             </div>
           ))}
         </div>

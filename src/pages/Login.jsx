@@ -101,21 +101,6 @@ export default function Login({ isAdmin }) {
           Sign up
         </Link>
       </div>
-
-      {/* Demo credentials for admin */}
-      {isAdmin && (
-        <div className="mt-6 p-4 bg-gray-700/30 rounded-lg text-sm border border-gray-600/30">
-          <h3 className="text-black font-medium mb-2">Demo Admin Accounts:</h3>
-          <ul className="space-y-1 text-black">
-            {DEFAULT_ADMINS.map((admin, i) => (
-              <li key={i} className="text-xs">
-                <span className="text-black">Email:</span> {admin.email}<br />
-                <span className="text-black">Password:</span> {admin.password}
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
     </div>
   );
 }
