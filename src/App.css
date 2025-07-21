@@ -98,3 +98,7 @@
     padding: 1.5rem;
   }
 }
+
+.dashboard-gradient-bg {
+  background: linear-gradient(135deg, #232a34 0%, #3a4250 100%);
+}

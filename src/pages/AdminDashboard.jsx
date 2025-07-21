@@ -100,18 +100,13 @@ const AdminDashboard = () => {
 
   return (
     <div
-      className={`min-h-screen ${
-        dark ? "bg-[#0c0d0c]" : "bg-gray-100"
-      } text-white flex`}
+      className={`min-h-screen dashboard-gradient-bg text-white flex`}
     >
-      {/* SIDE RAIL */}
-      <SideRail dark={dark} setDark={setDark} />
-
       {/* SCROLLABLE CONTENT */}
       <main className="flex-1 p-6 md:p-8 space-y-10 overflow-y-auto">
         {/* HEADER */}
         <header className="flex items-center justify-between">
-          <h1 className="text-3xl font-bold text-[#e3d271]">Admin Dashboard</h1>
+          <h1 className="text-3xl font-bold text-gray-900">Admin Dashboard</h1>
           <button className="text-sm px-4 py-2 rounded-xl border border-[#e3d271]/50 hover:bg-[#e3d271]/20 transition">
             Last login: 12 min ago
           </button>
@@ -121,20 +116,22 @@ const AdminDashboard = () => {
         <motion.section
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+          className="rounded-2xl p-1 bg-gradient-to-r from-[#4f8cff] to-[#235390] shadow-lg"
         >
-          <StatCard label="Total Users" value={quickStats.totalUsers} />
-          <StatCard
-            label="Revenue (USD)"
-            value={`$${quickStats.revenue.toLocaleString()}`}
-          />
-          <StatCard label="Active Services" value={quickStats.activeServices} />
-          <StatCard label="Support Tickets" value={quickStats.tickets} />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <StatCard label="Total Users" value={quickStats.totalUsers} />
+            <StatCard
+              label="Revenue (USD)"
+              value={`$${quickStats.revenue.toLocaleString()}`}
+            />
+            <StatCard label="Active Services" value={quickStats.activeServices} />
+            <StatCard label="Support Tickets" value={quickStats.tickets} />
+          </div>
         </motion.section>
 
         {/* SERVICES GRID */}
         <section>
-          <h2 className="text-2xl font-bold mb-4 text-[#e3d271]">Services</h2>
+          <h2 className="text-2xl font-bold mb-4 text-[#7da0c3]">Services</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {serviceCards.map((s) => (
               <ServiceCard key={s.id} {...s} />
@@ -144,7 +141,7 @@ const AdminDashboard = () => {
 
         {/* ORDERS TABLE */}
         <section>
-          <h2 className="text-2xl font-bold mb-4 text-[#e3d271]">
+          <h2 className="text-2xl font-bold mb-4 text-[#7da0c3]">
             Recent Orders
           </h2>
           <div className="overflow-x-auto">
@@ -180,7 +177,7 @@ const AdminDashboard = () => {
 
         {/* ANALYTICS CHARTS */}
         <section>
-          <h2 className="text-2xl font-bold mb-4 text-[#e3d271]">Analytics</h2>
+          <h2 className="text-2xl font-bold mb-4 text-[#7da0c3]">Analytics</h2>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
             {/* Revenue Trend (Line) */}
@@ -228,7 +225,7 @@ const AdminDashboard = () => {
           >
             {/* Mini Doughnut */}
             <div className="bg-white/5 backdrop-blur rounded-2xl p-4 border border-white/10">
-              <h4 className="text-sm text-[#e3d271] mb-2">Traffic Sources</h4>
+              <h4 className="text-sm text-[#7da0c3] mb-2">Traffic Sources</h4>
               <div className="h-23">
                 <Doughnut data={miniDoughnut} options={miniOpts} />
               </div>
@@ -236,7 +233,7 @@ const AdminDashboard = () => {
 
             {/* Mini Bar */}
             <div className="bg-white/5 backdrop-blur rounded-2xl p-4 border border-white/10">
-              <h4 className="text-sm text-[#e3d271] mb-2">Weekly Sign-ups</h4>
+              <h4 className="text-sm text-[#7da0c3] mb-2">Weekly Sign-ups</h4>
               <div className="h-23">
                 <Bar data={miniBar} options={miniOpts} />
               </div>
@@ -249,53 +246,23 @@ const AdminDashboard = () => {
 };
 
 /* ------------- sub-components ------------- */
-const SideRail = ({ dark, setDark }) => (
-  <aside className="w-20 bg-[#1a1a1a]/80 flex flex-col items-center py-8 space-y-8 border-r border-white/10">
-    {[FiBarChart2, FiUsers, FiShoppingBag, FiActivity, FiSettings].map(
-      (Icon, i) => (
-        <button
-          key={i}
-          className="p-3 rounded-xl hover:bg-[#e3d271]/20 transition text-[#e3d271]"
-          title={["Analytics", "Users", "Orders", "Logs", "Settings"][i]}
-        >
-          <Icon size={24} />
-        </button>
-      )
-    )}
-    <div className="flex-1" />
-    <button
-      onClick={() => setDark(!dark)}
-      className="p-3 rounded-xl hover:bg-[#e3d271]/20 transition text-[#e3d271]"
-      title="Toggle theme"
-    >
-      {dark ? "☀" : "🌙"}
-    </button>
-    <button
-      className="p-3 rounded-xl hover:bg-red-500/20 transition text-red-500"
-      title="Logout"
-    >
-      <FiLogOut size={24} />
-    </button>
-  </aside>
-);
-
 const StatCard = ({ label, value }) => (
   <motion.div
     whileHover={{ scale: 1.03 }}
-    className="bg-white/5 backdrop-blur rounded-2xl p-6 border border-white/10"
+    className="bg-white rounded-2xl p-6 border border-gray-200 shadow"
   >
-    <p className="text-sm text-[#808080]">{label}</p>
-    <p className="text-2xl font-bold text-[#e3d271]">{value}</p>
+    <p className="text-sm text-gray-500">{label}</p>
+    <p className="text-2xl font-bold text-gray-900">{value}</p>
   </motion.div>
 );
 
 const ServiceCard = ({ title, icon }) => (
   <motion.div
     whileHover={{ y: -6 }}
-    className="bg-white/5 backdrop-blur rounded-2xl p-6 border border-white/10 hover:border-[#e3d271] transition cursor-pointer"
+    className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-blue-400 transition cursor-pointer"
   >
-    <div className="text-[#e3d271] mb-3">{icon}</div>
-    <h3 className="font-semibold">{title}</h3>
+    <div className="text-blue-500 mb-3">{icon}</div>
+    <h3 className="font-semibold text-gray-900">{title}</h3>
   </motion.div>
 );
 
@@ -321,8 +288,8 @@ const ActivityLog = () => {
       {
         label: "Events",
         data: [3, 5, 2, 6, 4, 7, 5, 8],
-        borderColor: "#e3d271",
-        backgroundColor: "rgba(227, 210, 113, 0.15)",
+        borderColor: "#7da0c3",
+        backgroundColor: "rgba(125, 160, 195, 0.15)",
         fill: true,
         tension: 0.4,
         pointRadius: 0,
@@ -356,7 +323,7 @@ const ActivityLog = () => {
       className="bg-white/5 backdrop-blur rounded-2xl p-6 border border-white/10"
     >
       <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-        <h3 className="text-lg font-bold text-[#e3d271]">Activity Log</h3>
+        <h3 className="text-lg font-bold text-blue-500">Activity Log</h3>
         <div className="h-16 w-32 mt-4 md:mt-0">
           <Line data={sparkData} options={sparkOptions} />
         </div>
@@ -365,7 +332,7 @@ const ActivityLog = () => {
       {/* timeline */}
       <div className="relative space-y-4">
         {/* vertical line */}
-        <div className="absolute left-5 top-2 bottom-2 w-px bg-[#e3d271]/30" />
+        <div className="absolute left-5 top-2 bottom-2 w-px bg-blue-200" />
         {logs.map((l, idx) => (
           <motion.div
             key={idx}
@@ -374,7 +341,7 @@ const ActivityLog = () => {
             transition={{ delay: idx * 0.1 }}
             className="flex items-start gap-4"
           >
-            <div className="z-10 w-10 h-10 rounded-full bg-[#1a1a1a] border border-[#e3d271]/50 flex-center">
+            <div className="z-10 w-10 h-10 rounded-full bg-[#f3f4f6] border border-blue-200 flex-center">
               {l.icon}
             </div>
             <div className="flex-1">
@@ -395,12 +362,12 @@ const commonOptions = (title) => ({
   responsive: true,
   maintainAspectRatio: false,
   plugins: {
-    legend: { labels: { color: "#808080" } },
-    title: { display: true, text: title, color: "#e3d271", font: { size: 14 } },
+    legend: { labels: { color: "#7da0c3" } },
+    title: { display: true, text: title, color: "#7da0c3", font: { size: 14 } },
   },
   scales: {
-    x: { ticks: { color: "#808080" }, grid: { color: "#ffffff10" } },
-    y: { ticks: { color: "#808080" }, grid: { color: "#ffffff10" } },
+    x: { ticks: { color: "#7da0c3" }, grid: { color: "#e5e7eb" } },
+    y: { ticks: { color: "#7da0c3" }, grid: { color: "#e5e7eb" } },
   },
 });
 
@@ -410,8 +377,8 @@ const lineData = {
     {
       label: "Revenue",
       data: [12000, 19000, 15000, 25000, 22000, 30000],
-      borderColor: "#e3d271",
-      backgroundColor: "rgba(227, 210, 113, 0.2)",
+      borderColor: "#7da0c3",
+      backgroundColor: "rgba(125, 160, 195, 0.2)",
       tension: 0.3,
     },
   ],
@@ -423,7 +390,7 @@ const barData = {
     {
       label: "Requests",
       data: [432, 321, 287, 198, 176, 254],
-      backgroundColor: "#e3d271",
+      backgroundColor: "#7da0c3",
     },
   ],
 };
@@ -433,7 +400,7 @@ const doughnutData = {
   datasets: [
     {
       data: [35, 30, 20, 15],
-      backgroundColor: ["#e3d271", "#ffffff80", "#808080", "#ffffff40"],
+      backgroundColor: ["#7da0c3", "#e5e7eb", "#b0b8c1", "#cbd5e1"],
       borderWidth: 0,
     },
   ],
@@ -443,11 +410,11 @@ const doughnutOptions = {
   responsive: true,
   maintainAspectRatio: false,
   plugins: {
-    legend: { position: "bottom", labels: { color: "#808080" } },
+    legend: { position: "bottom", labels: { color: "#7da0c3" } },
     title: {
       display: true,
       text: "Traffic Sources",
-      color: "#e3d271",
+      color: "#7da0c3",
       font: { size: 14 },
     },
   },
@@ -459,7 +426,7 @@ const miniDoughnut = {
   datasets: [
     {
       data: [45, 35, 20],
-      backgroundColor: ["#e3d271", "#ffffff66", "#808080"],
+      backgroundColor: ["#7da0c3", "#e5e7eb", "#b0b8c1"],
       borderWidth: 0,
     },
   ],
@@ -471,7 +438,7 @@ const miniBar = {
     {
       label: "Sign-ups",
       data: [12, 19, 8, 15, 22, 18, 25],
-      backgroundColor: "#e3d271",
+      backgroundColor: "#7da0c3",
       borderRadius: 4,
     },
   ],

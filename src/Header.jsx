@@ -126,18 +126,6 @@ export default function Header({ darkMode, setDarkMode }) {
         {/* User/Admin Toggle */}
         {/* Removed User/Admin toggle buttons as requested */}
         {/* Theme toggle */}
-        <button
-          onClick={() => setDarkMode && setDarkMode((prev) => !prev)}
-          className="text-white hover:text-yellow-400 transition group focus:outline-none"
-        >
-          <span className="group-hover:scale-110 group-hover:text-blue-400 transition-transform duration-300">
-            {darkMode ? (
-              <SunIcon className="h-6 w-6" />
-            ) : (
-              <MoonIcon className="h-6 w-6" />
-            )}
-          </span>
-        </button>
       </nav>
 
       {/* Mobile Menu Button */}
@@ -182,18 +170,6 @@ export default function Header({ darkMode, setDarkMode }) {
           <Link to="/contact-us" className="text-lg hover:text-yellow-400 group focus:outline-none">
             <span className="group-hover:scale-105 group-hover:text-blue-400 transition-transform duration-300">Contact Us</span>
           </Link>
-          <button
-            onClick={() => setDarkMode && setDarkMode((prev) => !prev)}
-            className="text-white hover:text-yellow-400 transition group focus:outline-none"
-          >
-            <span className="group-hover:scale-110 group-hover:text-blue-400 transition-transform duration-300">
-              {darkMode ? (
-                <SunIcon className="h-6 w-6" />
-              ) : (
-                <MoonIcon className="h-6 w-6" />
-              )}
-            </span>
-          </button>
         </div>
       )}
     </header>
