@@ -6,6 +6,8 @@ export default function Signup({ isAdmin }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
@@ -14,6 +16,13 @@ export default function Signup({ isAdmin }) {
 
     if (password !== confirmPassword) {
       setError("Passwords don't match");
+      return;
+    }
+
+    // Password validation: min 6 chars, at least one special character
+    const specialCharRegex = /[!@#$%^&*(),.?":{}|<>]/;
+    if (password.length < 6 || !specialCharRegex.test(password)) {
+      setError("Password must be at least 6 characters and contain at least one special character");
       return;
     }
 
@@ -27,6 +36,8 @@ export default function Signup({ isAdmin }) {
     const newUser = {
       email,
       password,
+      firstName,
+      lastName,
       role: isAdmin ? "admin" : "user"
     };
 
@@ -48,6 +59,30 @@ export default function Signup({ isAdmin }) {
       </h2>
 
       <form onSubmit={handleSignup} className="space-y-4">
+        <div>
+          <label className="block text-sm font-medium text-gray-300 mb-1">
+            First Name
+          </label>
+          <input
+            type="text"
+            value={firstName}
+            onChange={(e) => setFirstName(e.target.value)}
+            className="w-full p-2 rounded bg-gray-700 text-white border border-gray-600 focus:border-yellow-500"
+            required
+          />
+        </div>
+        <div>
+          <label className="block text-sm font-medium text-gray-300 mb-1">
+            Last Name
+          </label>
+          <input
+            type="text"
+            value={lastName}
+            onChange={(e) => setLastName(e.target.value)}
+            className="w-full p-2 rounded bg-gray-700 text-white border border-gray-600 focus:border-yellow-500"
+            required
+          />
+        </div>
         <div>
           <label className="block text-sm font-medium text-gray-300 mb-1">
             Email

@@ -24,7 +24,12 @@ export default function Header({ darkMode, setDarkMode }) {
   // Get user email and initials
   const user = JSON.parse(localStorage.getItem("currentUser") || "{}");
   const email = user.email || "";
-  const initials = email.slice(0, 2).toUpperCase();
+  let initials = "";
+  if (user.firstName && user.lastName) {
+    initials = `${user.firstName[0] || ''}${user.lastName[0] || ''}`.toUpperCase();
+  } else if (email) {
+    initials = email.slice(0, 2).toUpperCase();
+  }
 
   // Logout handler
   const handleLogout = () => {
