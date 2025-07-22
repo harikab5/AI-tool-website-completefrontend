@@ -79,7 +79,7 @@ export default function Login({ isAdmin }) {
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full p-3 rounded bg-gray-100 border border-gray-300 focus:border-blue-500 focus:outline-none"
+              className="w-full text-black p-3 rounded bg-gray-100 border border-gray-300 focus:border-blue-500 focus:outline-none"
               placeholder="Enter your password"
               required
             />
