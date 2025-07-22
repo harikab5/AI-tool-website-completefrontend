@@ -9,7 +9,7 @@ export default function Welcome() {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen flex flex-col md:flex-row bg-[#f4f5f7]">
+    <div className="min-h-screen flex justify-center flex-col md:flex-row bg-[#f4f5f7]">
       {/* Left Section (Form) */}
       <div className="flex flex-col justify-center items-center w-full md:w-1/2 min-h-screen p-8">
         <div className="w-full max-w-md bg-white rounded-2xl shadow-xl p-8">
@@ -38,10 +38,6 @@ export default function Welcome() {
           {/* Login Component */}
           <Login isAdmin={isAdmin} />
         </div>
-      </div>
-      {/* Right Section (Image) */}
-      <div className="hidden md:flex w-1/2 min-h-screen bg-[#e5e7eb] p-0 m-0">
-        <img src={welcomeImg} alt="Welcome" className="w-full h-full object-cover rounded-none shadow-none" />
       </div>
     </div>
   );
