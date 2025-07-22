@@ -51,57 +51,51 @@ export default function Login({ isAdmin }) {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="bg-white rounded-lg shadow-lg p-8 w-full max-w-md">
-        <h2 className="text-2xl font-bold mb-2 text-gray-900 text-center">
-          Welcome {isAdmin ? "Admin" : "User"}
-        </h2>
-        <p className="mb-6 text-gray-500 text-center">Please enter your details</p>
-        <form onSubmit={handleLogin} className="space-y-4">
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
-              Email
-            </label>
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="w-full p-3 rounded bg-gray-100 border border-gray-300 focus:border-blue-500 focus:outline-none"
-              placeholder="Enter your email"
-              required
-            />
-          </div>
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
-              Password
-            </label>
-            <input
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              className="w-full p-3 rounded bg-gray-100 border border-gray-300 focus:border-blue-500 focus:outline-none"
-              placeholder="Enter your password"
-              required
-            />
-          </div>
-          {error && <div className="text-red-500 text-sm text-center bg-red-100 p-2 rounded">{error}</div>}
-          <button
-            type="submit"
-            className="w-full py-3 mt-4 rounded bg-gradient-to-r from-gray-700 to-gray-900 text-white font-semibold shadow"
-          >
-            Login
-          </button>
-        </form>
-        <div className="mt-4 text-center text-gray-500">
-          Don't have an account?{" "}
-          <Link
-            to="/signup"
-            state={{ isAdmin }}
-            className="text-blue-600 font-medium hover:underline"
-          >
-            Sign up
-          </Link>
+    <div className="form-container">
+      <form onSubmit={handleLogin} className="space-y-4">
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">
+            Email
+          </label>
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className="w-full p-3 rounded bg-gray-100 border border-gray-300 focus:border-blue-500 focus:outline-none text-black"
+            placeholder="Enter your email"
+            required
+          />
         </div>
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">
+            Password
+          </label>
+          <input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            className="w-full p-3 rounded bg-gray-100 border border-gray-300 focus:border-blue-500 focus:outline-none text-black"
+            placeholder="Enter your password"
+            required
+          />
+        </div>
+        {error && <div className="text-red-500 text-sm text-center bg-red-100 p-2 rounded">{error}</div>}
+        <button
+          type="submit"
+          className="w-full py-3 mt-4 rounded bg-gradient-to-r from-gray-700 to-gray-900 text-white font-semibold shadow"
+        >
+          Login
+        </button>
+      </form>
+      <div className="mt-4 text-center text-gray-500 form-footer">
+        Don't have an account?{" "}
+        <Link
+          to="/signup"
+          state={{ isAdmin }}
+          className="text-blue-600 font-medium hover:underline"
+        >
+          Sign up
+        </Link>
       </div>
     </div>
   );

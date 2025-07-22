@@ -1,47 +1,175 @@
+/* --- Welcome Page Two-Column Layout --- */
 .welcome-container {
-  background-color: #222;
-  color: white;
-  min-height: 100vh;
+  height: 100vh;
+  width: 100vw;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: row;
+  background: linear-gradient(90deg, #f8fafc 60%, #e5e7eb 100%);
+  overflow: hidden;
 }
 
 .welcome-box {
-  background-color: #333;
-  padding: 2rem;
-  border-radius: 1rem;
+  flex: 1;
   display: flex;
-  flex-direction: row;
-  gap: 2rem;
-  box-shadow: 0 0 20px rgba(255, 230, 0, 0.2);
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 4rem 3rem 4rem 6rem;
+  background: transparent;
+  color: #222;
+  min-width: 420px;
+  max-width: 600px;
 }
 
-.welcome-image {
-  width: 300px;
-  border-radius: 1rem;
+.logo {
+  margin-bottom: 2.5rem;
+  margin-left: 0.2rem;
+  margin-top: 0.2rem;
 }
 
 .welcome-buttons {
   display: flex;
-  gap: 1rem;
-  margin-bottom: 1rem;
+  gap: 1.2rem;
+  margin-bottom: 2.5rem;
+  margin-left: 0.1rem;
 }
 
 .welcome-buttons button {
-  background-color: #ffe600;
-  color: black;
+  background-color: #f3f4f6;
+  color: #23272f;
   border: none;
-  padding: 0.6rem 1.2rem;
-  border-radius: 0.5rem;
-  font-weight: bold;
+  padding: 0.7rem 2.2rem;
+  border-radius: 999px;
+  font-weight: 600;
   cursor: pointer;
+  font-size: 1.1rem;
+  transition: background 0.2s, color 0.2s;
+  box-shadow: none;
 }
 
 .welcome-buttons button.active {
-  background-color: #e0cc00;
+  background-color: #23272f;
+  color: #fff;
 }
 
 .welcome-buttons button:hover {
-  background-color: #d4b900;
+  background-color: #e5e7eb;
+  color: #23272f;
+  opacity: 1;
+}
+
+.welcome-title {
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+  color: #18181b;
+  text-align: left;
+  margin-left: 0.1rem;
+}
+
+.welcome-subtext {
+  color: #6b7280;
+  margin-bottom: 2.2rem;
+  font-size: 1.1rem;
+  text-align: left;
+  margin-left: 0.1rem;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 540px;
+  background: #fff;
+  border-radius: 1.2rem;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+  padding: 2.5rem 2rem 2rem 2rem;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.form-container input {
+  width: 100%;
+  padding: 1.1rem 1.2rem;
+  border-radius: 0.7rem;
+  border: 1.5px solid #e5e7eb;
+  margin-bottom: 1.5rem;
+  font-size: 1.08rem;
+  background: #f8fafc;
+  color: #23272f;
+}
+
+.form-container label {
+  font-weight: 600;
+  color: #23272f;
+  margin-bottom: 0.4rem;
+  display: block;
+  font-size: 1.08rem;
+}
+
+.form-container button {
+  width: 100%;
+  padding: 1.1rem 0;
+  border-radius: 0.7rem;
+  background: linear-gradient(90deg, #6b7280, #23272f);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.18rem;
+  border: none;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.form-container button:hover {
+  background: linear-gradient(90deg, #23272f, #6b7280);
+}
+
+.form-footer {
+  text-align: center;
+  color: #6b7280;
+  margin-top: 1.2rem;
+  font-size: 1.05rem;
+}
+
+.form-footer a {
+  color: #2563eb;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.form-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Right column (illustration) */
+.welcome-image {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e5e7eb;
+}
+
+.welcome-image img, .welcome-image svg {
+  max-width: 440px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+  .welcome-container {
+    flex-direction: column;
+    height: auto;
+  }
+  .welcome-box {
+    padding: 2rem 1rem;
+    max-width: 100vw;
+    min-width: 0;
+  }
+  .welcome-image {
+    padding: 2rem 0;
+  }
 }

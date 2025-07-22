@@ -43,17 +43,12 @@ export default function Signup({ isAdmin }) {
 
     localStorage.setItem("users", JSON.stringify([...users, newUser]));
 
-    // Redirect to login with prefill and correct isAdmin
-    navigate("/login", {
-      state: {
-        prefillEmail: email,
-        isAdmin
-      }
-    });
+    // Redirect to welcome page after signup
+    navigate("/");
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+    <div className="bg-gray-100 min-h-screen flex items-center justify-center">
       <div className="bg-white rounded-lg shadow-lg p-8 w-full max-w-md">
         <h2 className="text-2xl font-bold mb-2 text-gray-900 text-center">
           Sign up as {isAdmin ? "Admin" : "User"}
@@ -68,7 +63,7 @@ export default function Signup({ isAdmin }) {
               type="text"
               value={firstName}
               onChange={(e) => setFirstName(e.target.value)}
-              className="w-full p-3 rounded bg-gray-100 border border-gray-300 focus:border-blue-500 focus:outline-none"
+              className="w-full p-3 rounded bg-gray-100 border border-gray-300 focus:border-blue-500 focus:outline-none text-black"
               required
             />
           </div>
@@ -80,7 +75,7 @@ export default function Signup({ isAdmin }) {
               type="text"
               value={lastName}
               onChange={(e) => setLastName(e.target.value)}
-              className="w-full p-3 rounded bg-gray-100 border border-gray-300 focus:border-blue-500 focus:outline-none"
+              className="w-full p-3 rounded bg-gray-100 border border-gray-300 focus:border-blue-500 focus:outline-none text-black"
               required
             />
           </div>
@@ -92,7 +87,7 @@ export default function Signup({ isAdmin }) {
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full p-3 rounded bg-gray-100 border border-gray-300 focus:border-blue-500 focus:outline-none"
+              className="w-full p-3 rounded bg-gray-100 border border-gray-300 focus:border-blue-500 focus:outline-none text-black"
               required
             />
           </div>
@@ -104,7 +99,7 @@ export default function Signup({ isAdmin }) {
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full p-3 rounded bg-gray-100 border border-gray-300 focus:border-blue-500 focus:outline-none"
+              className="w-full p-3 rounded bg-gray-100 border border-gray-300 focus:border-blue-500 focus:outline-none text-black"
               required
               minLength="6"
             />
@@ -117,7 +112,7 @@ export default function Signup({ isAdmin }) {
               type="password"
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
-              className="w-full p-3 rounded bg-gray-100 border border-gray-300 focus:border-blue-500 focus:outline-none"
+              className="w-full p-3 rounded bg-gray-100 border border-gray-300 focus:border-blue-500 focus:outline-none text-black"
               required
               minLength="6"
             />
@@ -132,11 +127,7 @@ export default function Signup({ isAdmin }) {
         </form>
         <div className="mt-4 text-center text-gray-500">
           Already have an account?{" "}
-          <Link
-            to="/login"
-            state={{ isAdmin }}
-            className="text-blue-600 font-medium hover:underline"
-          >
+          <Link to="/" className="text-blue-600 font-medium hover:underline">
             Login
           </Link>
         </div>
