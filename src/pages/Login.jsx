@@ -51,55 +51,57 @@ export default function Login({ isAdmin }) {
   };
 
   return (
-    <div className="w-full">
-      <form onSubmit={handleLogin} className="space-y-4">
-        <div>
-          <label className="block text-sm font-medium text-gray-300 mb-1">
-            Email
-          </label>
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            className="w-full p-3 rounded-lg bg-gray-700/50 text-white border border-gray-600 focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400/20 transition-all"
-            placeholder="Enter your email"
-            required
-          />
+    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+      <div className="bg-white rounded-lg shadow-lg p-8 w-full max-w-md">
+        <h2 className="text-2xl font-bold mb-2 text-gray-900 text-center">
+          Welcome {isAdmin ? "Admin" : "User"}
+        </h2>
+        <p className="mb-6 text-gray-500 text-center">Please enter your details</p>
+        <form onSubmit={handleLogin} className="space-y-4">
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              Email
+            </label>
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="w-full p-3 rounded bg-gray-100 border border-gray-300 focus:border-blue-500 focus:outline-none"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              Password
+            </label>
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              className="w-full p-3 rounded bg-gray-100 border border-gray-300 focus:border-blue-500 focus:outline-none"
+              placeholder="Enter your password"
+              required
+            />
+          </div>
+          {error && <div className="text-red-500 text-sm text-center bg-red-100 p-2 rounded">{error}</div>}
+          <button
+            type="submit"
+            className="w-full py-3 mt-4 rounded bg-gradient-to-r from-gray-700 to-gray-900 text-white font-semibold shadow"
+          >
+            Login
+          </button>
+        </form>
+        <div className="mt-4 text-center text-gray-500">
+          Don't have an account?{" "}
+          <Link
+            to="/signup"
+            state={{ isAdmin }}
+            className="text-blue-600 font-medium hover:underline"
+          >
+            Sign up
+          </Link>
         </div>
-        
-        <div>
-          <label className="block text-sm font-medium text-gray-300 mb-1">
-            Password
-          </label>
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            className="w-full p-3 rounded-lg bg-gray-700/50 text-white border border-gray-600 focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400/20 transition-all"
-            placeholder="Enter your password"
-            required
-          />
-        </div>
-
-        {error && <div className="text-red-400 text-sm text-center bg-red-500/10 p-2 rounded-lg">{error}</div>}
-
-        <button
-          type="submit"
-          className="w-full bg-gradient-to-r from-gray-700 to-gray-900 text-white font-bold py-3 px-4 rounded-lg transition hover:from-gray-600 hover:to-gray-800 shadow-lg hover:shadow-xl transform hover:scale-105"
-        >
-          Login
-        </button>
-      </form>
-
-      <div className="mt-4 text-center text-gray-400">
-        Don't have an account?{" "}
-        <Link 
-          to="/signup" 
-          state={{ isAdmin }}
-          className="text-blue-400 hover:text-blue-300 transition-colors font-medium"
-        >
-          Sign up
-        </Link>
       </div>
     </div>
   );
