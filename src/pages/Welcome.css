@@ -96,7 +96,11 @@
   margin-bottom: 1.5rem;
   font-size: 1.08rem;
   background: #f8fafc;
+<<<<<<< HEAD
   color: #000;
+=======
+  color: #23272f;
+>>>>>>> ee9b970acbde2e373f0f45e7b212b0b3966d7052
 }
 
 .form-container label {
