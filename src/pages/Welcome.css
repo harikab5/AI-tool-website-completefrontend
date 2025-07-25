@@ -3,17 +3,17 @@
   height: 100vh;
   width: 100vw;
   display: flex;
-  flex-direction: row;
   background: linear-gradient(90deg, #f8fafc 60%, #e5e7eb 100%);
   overflow: hidden;
+  justify-items: center;
+  justify-content: center;
 }
 
 .welcome-box {
   flex: 1;
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   padding: 4rem 3rem 4rem 6rem;
   background: transparent;
   color: #222;
@@ -84,6 +84,8 @@
   padding: 2.5rem 2rem 2rem 2rem;
   margin-bottom: 1.5rem;
   text-align: left;
+  justify-items: center;
+  
 }
 
 .form-container input {
@@ -94,7 +96,7 @@
   margin-bottom: 1.5rem;
   font-size: 1.08rem;
   background: #f8fafc;
-  color: #23272f;
+  color: #000;
 }
 
 .form-container label {
@@ -172,4 +174,51 @@
   .welcome-image {
     padding: 2rem 0;
   }
+}
+.welcome-container {
+  background-color: #222;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome-box {
+  background-color: #333;
+  padding: 2rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  box-shadow: 0 0 20px rgba(255, 230, 0, 0.2);
+}
+
+.welcome-image {
+  width: 300px;
+  border-radius: 1rem;
+}
+
+.welcome-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.welcome-buttons button {
+  background-color: #ffe600;
+  color: black;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.welcome-buttons button.active {
+  background-color: #e0cc00;
+}
+
+.welcome-buttons button:hover {
+  background-color: #d4b900;
 }

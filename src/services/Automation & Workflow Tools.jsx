@@ -198,7 +198,7 @@ const Service6Benefits = () => (
 
 // Service6HowItWorks Component
 const steps = [
-  { step: "Step 1", title: "Identify Opportunities", desc: "Find repetitive or error-prone tasks. Gather input from teams. Prioritize what to automate first." },
+  { step: "Step 1", title: "Identify Opportunities", desc: "Find error-prone tasks. Gather input from teams. Prioritize what to automate first." },
   { step: "Step 2", title: "Design Workflows", desc: "Map out triggers, actions, and decisions. Use visual tools for clarity. Plan for future changes." },
   { step: "Step 3", title: "Deploy & Test", desc: "Set up automation tools. Test for accuracy and reliability. Get feedback and refine." },
   { step: "Step 4", title: "Monitor & Optimize", desc: "Track results and fix issues. Improve workflows over time. Maximize your automation ROI." }

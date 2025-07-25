@@ -11,8 +11,8 @@ export default function Login({ isAdmin }) {
 
   // Default admin credentials (for demo)
   const DEFAULT_ADMINS = [
-    { email: "admin@example.com", password: "admin123", role: "admin" },
-    { email: "superadmin@example.com", password: "superadmin123", role: "admin" }
+    { email: "admin@example.in", password: "admin123", role: "admin" },
+    { email: "admin@enkonix.in", password: "admin123", role: "admin" }
   ];
 
   const handleLogin = (e) => {

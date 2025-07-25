@@ -48,7 +48,7 @@ export default function Signup({ isAdmin }) {
   };
 
   return (
-    <div className="bg-gray-100 min-h-screen flex items-center justify-center">
+    <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <div className="bg-white rounded-lg shadow-lg p-8 w-full max-w-md">
         <h2 className="text-2xl font-bold mb-2 text-gray-900 text-center">
           Sign up as {isAdmin ? "Admin" : "User"}
@@ -127,7 +127,10 @@ export default function Signup({ isAdmin }) {
         </form>
         <div className="mt-4 text-center text-gray-500">
           Already have an account?{" "}
-          <Link to="/" className="text-blue-600 font-medium hover:underline">
+          <Link
+            to="/"
+            className="text-blue-600 font-medium hover:underline"
+          >
             Login
           </Link>
         </div>
